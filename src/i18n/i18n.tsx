@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react'
+import { createContext, useContext, useState, useEffect, ReactNode } from 'react'
 import { zhCN } from './locales/zh-CN'
 import { en } from './locales/en'
 import { zhTW } from './locales/zh-TW'
