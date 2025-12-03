@@ -100,7 +100,7 @@ const RWASection = () => {
 
                     {/* 演示平台按钮 */}
                     <motion.a
-                        href="https://cdy-rwa-demo.pages.dev/"
+                        href="https://rwademo.scdc.cloud/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 px-6 py-3 bg-white/20 hover:bg-white/30 backdrop-blur-lg rounded-full border border-white/30 transition-all duration-300 group"
