@@ -4,7 +4,12 @@ import { motion, AnimatePresence, useScroll, useSpring } from 'framer-motion'
 import { useI18n } from '../i18n/i18n'
 import LanguageSwitcher from './LanguageSwitcher'
 
-const Header = () => {
+interface HeaderProps {
+    onNavigate: (page: 'home' | 'business-plan') => void;
+    currentPage?: 'home' | 'business-plan';
+}
+
+const Header = ({ onNavigate, currentPage = 'home' }: HeaderProps) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const [scrolled, setScrolled] = useState(false)
     const { scrollYProgress } = useScroll()
@@ -26,11 +31,24 @@ const Header = () => {
     ]
 
     const scrollToSection = (href: string) => {
-        const element = document.querySelector(href)
-        if (element) {
-            element.scrollIntoView({ behavior: 'smooth' })
-            setIsMenuOpen(false)
+        if (currentPage !== 'home') {
+            // 如果当前在商业计划书页面,先返回首页
+            onNavigate('home');
+            // 等待页面切换和DOM更新后再滚动
+            setTimeout(() => {
+                const element = document.querySelector(href);
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }
+            }, 300);
+        } else {
+            // 如果已经在首页,直接滚动
+            const element = document.querySelector(href);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
         }
+        setIsMenuOpen(false);
     }
 
     useEffect(() => {
@@ -89,7 +107,7 @@ const Header = () => {
                         </motion.div>
 
                         {/* Desktop Menu */}
-                        <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
+                        <div className="hidden md:flex items-center space-x-4 lg:space-x-6">
                             {menuItems.map((item, index) => (
                                 <motion.a
                                     key={item.name}
@@ -110,6 +128,18 @@ const Header = () => {
                                     />
                                 </motion.a>
                             ))}
+                            {/* 商业计划书特殊按钮 */}
+                            <motion.button
+                                onClick={() => onNavigate('business-plan')}
+                                className="px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-full hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-300 font-medium text-sm lg:text-base"
+                                initial={{ opacity: 0, scale: 0.8 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                transition={{ delay: 0.7, type: "spring" }}
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
+                            >
+                                商业计划
+                            </motion.button>
                         </div>
 
                         {/* Language Switcher (Desktop) */}
@@ -181,6 +211,18 @@ const Header = () => {
                                             />
                                         </motion.a>
                                     ))}
+                                    {/* 商业计划书按钮（移动端） */}
+                                    <motion.button
+                                        onClick={() => { onNavigate('business-plan'); setIsMenuOpen(false); }}
+                                        className="block mx-4 mt-2 px-4 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all text-center font-medium"
+                                        variants={{
+                                            open: { y: 0, opacity: 1 },
+                                            closed: { y: 20, opacity: 0 }
+                                        }}
+                                        whileTap={{ scale: 0.98 }}
+                                    >
+                                        商业计划
+                                    </motion.button>
                                 </motion.div>
                             </motion.div>
                         )}

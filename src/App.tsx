@@ -1,3 +1,5 @@
+import { useState } from 'react'
+import { ThemeProvider } from './contexts/ThemeContext'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import About from './components/About'
@@ -7,23 +9,35 @@ import Solutions from './components/Solutions'
 import SuccessCases from './components/SuccessCases'
 import Team from './components/Team'
 import Footer from './components/Footer'
+import BusinessPlan from './components/BusinessPlan'
+
+type Page = 'home' | 'business-plan';
 
 function App() {
+    const [currentPage, setCurrentPage] = useState<Page>('home');
+
     return (
-        <div className="min-h-screen bg-white">
-            <Header />
-            <main>
-                <Hero />
-                <About />
-                <CoreProducts />
-                <RWASection />
-                <Solutions />
-                <SuccessCases />
-                <Team />
-            </main>
-            <Footer />
-        </div>
+        <ThemeProvider>
+            <div className="min-h-screen bg-white">
+                <Header onNavigate={setCurrentPage} currentPage={currentPage} />
+                {currentPage === 'home' ? (
+                    <main>
+                        <Hero />
+                        <About />
+                        <CoreProducts />
+                        <RWASection />
+                        <Solutions />
+                        <SuccessCases />
+                        <Team />
+                    </main>
+                ) : (
+                    <BusinessPlan />
+                )}
+                {currentPage === 'home' && <Footer />}
+            </div>
+        </ThemeProvider>
     )
 }
 
 export default App
+
