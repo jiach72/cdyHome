@@ -94,12 +94,13 @@ export default function BusinessPlan() {
 
     return (
         <div className={`min-h-screen ${styles.background} ${styles.text} transition-colors duration-300`}>
-            <div className="fixed top-24 right-8 z-50 flex gap-2">
+            {/* 主题切换按钮 - 响应式优化 */}
+            <div className="fixed top-16 sm:top-20 right-2 sm:right-4 md:right-8 z-50 flex gap-1 sm:gap-2">
                 <button
                     onClick={() => setTheme('reading')}
-                    className={`px-4 py-2 rounded-lg font-medium transition-all ${theme === 'reading'
-                            ? 'bg-amber-500 text-white shadow-lg scale-105'
-                            : 'bg-white/20 hover:bg-white/30'
+                    className={`px-2 sm:px-3 md:px-4 py-1.5 sm:py-2 rounded-lg font-medium transition-all text-sm sm:text-base ${theme === 'reading'
+                        ? 'bg-amber-500 text-white shadow-lg scale-105'
+                        : 'bg-white/20 hover:bg-white/30'
                         }`}
                     title="阅读模式"
                 >
@@ -107,9 +108,9 @@ export default function BusinessPlan() {
                 </button>
                 <button
                     onClick={() => setTheme('dark')}
-                    className={`px-4 py-2 rounded-lg font-medium transition-all ${theme === 'dark'
-                            ? 'bg-blue-600 text-white shadow-lg scale-105'
-                            : 'bg-white/20 hover:bg-white/30'
+                    className={`px-2 sm:px-3 md:px-4 py-1.5 sm:py-2 rounded-lg font-medium transition-all text-sm sm:text-base ${theme === 'dark'
+                        ? 'bg-blue-600 text-white shadow-lg scale-105'
+                        : 'bg-white/20 hover:bg-white/30'
                         }`}
                     title="深色模式"
                 >
@@ -117,9 +118,9 @@ export default function BusinessPlan() {
                 </button>
                 <button
                     onClick={() => setTheme('light')}
-                    className={`px-4 py-2 rounded-lg font-medium transition-all ${theme === 'light'
-                            ? 'bg-gray-200 text-gray-900 shadow-lg scale-105'
-                            : 'bg-white/20 hover:bg-white/30'
+                    className={`px-2 sm:px-3 md:px-4 py-1.5 sm:py-2 rounded-lg font-medium transition-all text-sm sm:text-base ${theme === 'light'
+                        ? 'bg-gray-200 text-gray-900 shadow-lg scale-105'
+                        : 'bg-white/20 hover:bg-white/30'
                         }`}
                     title="浅色模式"
                 >
@@ -128,7 +129,8 @@ export default function BusinessPlan() {
             </div>
 
             <div className="flex pt-20">
-                <aside className="w-64 h-screen sticky top-20 overflow-y-auto border-r border-gray-700 px-6 py-8">
+                {/* 侧边栏目录 - 在移动端隐藏 */}
+                <aside className="hidden lg:block w-64 h-screen sticky top-20 overflow-y-auto border-r border-gray-700 px-6 py-8">
                     <h2 className="text-xl font-bold mb-6">目录</h2>
                     <nav className="space-y-2">
                         {tableOfContents.map((item) => (
@@ -136,8 +138,8 @@ export default function BusinessPlan() {
                                 <button
                                     onClick={() => scrollToSection(item.id)}
                                     className={`w-full text-left px-3 py-2 rounded-lg transition-all ${activeSection === item.id
-                                            ? `${styles.accent} font-semibold bg-white/10`
-                                            : 'hover:bg-white/5'
+                                        ? `${styles.accent} font-semibold bg-white/10`
+                                        : 'hover:bg-white/5'
                                         }`}
                                 >
                                     {item.title}
@@ -149,8 +151,8 @@ export default function BusinessPlan() {
                                                 key={child.id}
                                                 onClick={() => scrollToSection(child.id)}
                                                 className={`w-full text-left px-3 py-1.5 text-sm rounded transition-all ${activeSection === child.id
-                                                        ? `${styles.accent} font-medium`
-                                                        : 'opacity-70 hover:opacity-100 hover:bg-white/5'
+                                                    ? `${styles.accent} font-medium`
+                                                    : 'opacity-70 hover:opacity-100 hover:bg-white/5'
                                                     }`}
                                             >
                                                 {child.title}
@@ -163,12 +165,13 @@ export default function BusinessPlan() {
                     </nav>
                 </aside>
 
-                <main className="flex-1 px-12 py-8 max-w-5xl">
-                    <header className="mb-12 text-center">
-                        <h1 className={`text-5xl font-bold mb-4 ${styles.heading}`}>
+                {/* 主内容区域 - 响应式优化 */}
+                <main className="flex-1 px-4 sm:px-8 md:px-12 py-8 max-w-5xl mx-auto">
+                    <header className="mb-8 sm:mb-12 text-center">
+                        <h1 className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 ${styles.heading}`}>
                             创电云:全球双引擎RWA战略商业计划书
                         </h1>
-                        <p className="text-lg opacity-80">发布: scdc.cloud | 日期: 2025年12月4日</p>
+                        <p className="text-sm sm:text-base md:text-lg opacity-80">发布: scdc.cloud | 日期: 2025年12月4日</p>
                     </header>
 
                     <ContentSection1 styles={styles} />

@@ -23,10 +23,10 @@ interface SectionProps {
 export function ContentSection1({ styles }: SectionProps) {
     return (
         <section id="summary" className="mb-16">
-            <h2 className={`text-4xl font-bold mb-8 ${styles.heading}`}>1. 执行摘要</h2>
+            <h2 className={`text-2xl md:text-3xl lg:text-4xl font-bold mb-6 md:mb-8 ${styles.heading}`}>1. 执行摘要</h2>
 
             <div id="summary-1-1" className="mb-12">
-                <h3 className="text-3xl font-semibold mb-6">1.1 宏观背景:能源转型与资本效率的时代错配</h3>
+                <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold mb-4 md:mb-6">1.1 宏观背景:能源转型与资本效率的时代错配</h3>
                 <div className="space-y-4 leading-relaxed">
                     <p>
                         站在2025年年末的时间节点回望,全球能源格局正在经历一场深刻的结构性重塑。中国作为全球新能源产业链的绝对核心,其产能与装机量已占据统治地位。根据国家统计局及行业数据,2024年中国新能源汽车产量达到<span className={`font-bold text-2xl ${styles.accent}`}>944.3万辆</span>,太阳能电池产量增长<span className={`font-bold text-xl ${styles.accent}`}>54%</span>,清洁能源发电量达到<span className={`font-bold text-2xl ${styles.accent}`}>31,906亿千瓦时</span>。
@@ -44,21 +44,21 @@ export function ContentSection1({ styles }: SectionProps) {
             </div>
 
             <div id="summary-1-2" className="mb-12">
-                <h3 className="text-3xl font-semibold mb-6">1.2 战略愿景:"一个技术底座,两个独立市场"</h3>
+                <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold mb-4 md:mb-6">1.2 战略愿景:"一个技术底座,两个独立市场"</h3>
                 <div className="space-y-4 leading-relaxed">
                     <p>
                         基于公司在新能源领域的积累与沉淀,我们正式确立<strong>"双轨并行,独立运营"(Parallel Dual-Track)</strong>的核心战略。这一战略的核心逻辑在于:利用技术的可复用性降低边际成本,利用市场的差异化隔离政策风险并最大化收益。
                     </p>
 
                     <div className={`${styles.card} p-6 rounded-xl my-8`}>
-                        <h4 className="text-2xl font-semibold mb-4">内轨(Domestic Track):能源数字化专家</h4>
+                        <h4 className="text-lg md:text-xl lg:text-2xl font-semibold mb-3 md:mb-4">内轨(Domestic Track):能源数字化专家</h4>
                         <p>
                             在国内市场,我们紧跟"电改"与"数改"的双重红利。依托广东(特别是佛山)成熟的电力现货市场与制造业基础,深耕工商业储能与虚拟电厂(VPP)业务。我们的目标不是简单的卖设备,而是成为资产的全生命周期运营商。通过VPP响应、峰谷套利及EMC(合同能源管理)获取稳定的人民币现金流;更关键的是,我们将利用"数据要素"改革的契机,将电站运营数据转化为可融资的"数据资产",打通国内银行的低息信贷通道。
                         </p>
                     </div>
 
                     <div className={`${styles.card} p-6 rounded-xl my-8`}>
-                        <h4 className="text-2xl font-semibold mb-4">外轨(Overseas Track):Web3 RWA创新者</h4>
+                        <h4 className="text-lg md:text-xl lg:text-2xl font-semibold mb-3 md:mb-4">外轨(Overseas Track):Web3 RWA创新者</h4>
                         <p>
                             在海外市场,我们立足香港与新加坡,构建合规的RWA发行平台。我们将国内经过验证的优质资产(如帕尔福电机项目的收益权)进行结构化打包,通过区块链技术发行STO(Security Token Offering)。这不仅能为公司获取低成本的美元/稳定币融资,更能通过RWA代币的流动性溢价,实现资产价值的重估。海外业务将完全遵循当地金融监管(如香港SFC),与国内业务在法律实体、资金流向及数据存储上实现物理隔离。
                         </p>
@@ -73,7 +73,7 @@ export function ContentSection1({ styles }: SectionProps) {
             </div>
 
             <div id="summary-1-3" className="mb-12">
-                <h3 className="text-3xl font-semibold mb-6">1.3 战略价值与路线图</h3>
+                <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold mb-4 md:mb-6">1.3 战略价值与路线图</h3>
                 <p className="leading-relaxed mb-6">
                     本计划书将详细阐述如何通过一套共用的底层软硬件体系(BMS+EMS+边缘网关)同时支撑这两套截然不同的商业逻辑。这套体系在国内对接"长安链"以满足国资监管与数据资产确权需求;在海外对接Solana或Ethereum公链以满足全球投资者的透明度与流动性需求。
                 </p>
@@ -108,10 +108,10 @@ export function ContentSection1({ styles }: SectionProps) {
 export function ContentSection2({ styles }: SectionProps) {
     return (
         <section id="tech" className="mb-16">
-            <h2 className={`text-4xl font-bold mb-8 ${styles.heading}`}>2. 核心技术底座</h2>
+            <h2 className={`text-2xl md:text-3xl lg:text-4xl font-bold mb-6 md:mb-8 ${styles.heading}`}>2. 核心技术底座</h2>
 
             <div id="tech-2-1" className="mb-12">
-                <h3 className="text-3xl font-semibold mb-6">2.1 硬件即信任:BMS+EMS+边缘计算网关</h3>
+                <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold mb-4 md:mb-6">2.1 硬件即信任:BMS+EMS+边缘计算网关</h3>
                 <p className="leading-relaxed mb-6">
                     在RWA商业模式中,最核心的风险在于"信任脱节"——即链上数字资产与链下物理资产的映射关系是否真实可靠。如果底层数据造假,一切金融衍生品都将成为空中楼阁。因此,创电云的硬件体系不仅仅是能源管理工具,更是资产信用的物理锚点。
                 </p>
@@ -143,7 +143,7 @@ export function ContentSection2({ styles }: SectionProps) {
             </div>
 
             <div id="tech-2-2" className="mb-12">
-                <h3 className="text-3xl font-semibold mb-6">2.2 技术适配性分析:国内与海外的"同源异构"</h3>
+                <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold mb-4 md:mb-6">2.2 技术适配性分析:国内与海外的"同源异构"</h3>
 
                 {/* 技术栈数据流图 */}
                 <div className="my-12">
@@ -177,10 +177,10 @@ export function ContentSection2({ styles }: SectionProps) {
 export function ContentSection3({ styles }: SectionProps) {
     return (
         <section id="domestic" className="mb-16">
-            <h2 className={`text-4xl font-bold mb-8 ${styles.heading}`}>3. 业务线A:国内数据资产运营</h2>
+            <h2 className={`text-2xl md:text-3xl lg:text-4xl font-bold mb-6 md:mb-8 ${styles.heading}`}>3. 业务线A:国内数据资产运营</h2>
 
             <div id="domestic-3-1" className="mb-12">
-                <h3 className="text-3xl font-semibold mb-6">3.1 资产端深度分析:华核佛山项目集群</h3>
+                <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold mb-4 md:mb-6">3.1 资产端深度分析:华核佛山项目集群</h3>
 
                 <div className={`${styles.card} p-6 rounded-xl mb-6`}>
                     <h4 className="text-2xl font-semibold mb-4">核心资产画像:帕尔福电机(Palfu Motor)</h4>
@@ -192,61 +192,65 @@ export function ContentSection3({ styles }: SectionProps) {
                 </div>
 
                 {/* 15个项目资产表格 */}
-                <div className="overflow-x-auto my-8">
-                    <table className={`w-full ${styles.card} rounded-xl overflow-hidden`}>
-                        <thead className={styles.tableHeader}>
-                            <tr>
-                                <th className="px-4 py-3 text-left">项目分类</th>
-                                <th className="px-4 py-3 text-center">数量</th>
-                                <th className="px-4 py-3 text-left">典型代表</th>
-                                <th className="px-4 py-3 text-center">总容量</th>
-                                <th className="px-4 py-3 text-left">行业属性</th>
-                                <th className="px-4 py-3 text-center">消纳能力</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr className={styles.tableRow}>
-                                <td className="px-4 py-3 font-semibold">高端制造</td>
-                                <td className="px-4 py-3 text-center">5</td>
-                                <td className="px-4 py-3">帕尔福电机</td>
-                                <td className="px-4 py-3 text-center font-bold">6.0/12.0 MW/MWh</td>
-                                <td className="px-4 py-3 text-sm">负荷稳定,电能质量敏感</td>
-                                <td className="px-4 py-3 text-center text-green-500 font-bold">98%+</td>
-                            </tr>
-                            <tr className={styles.tableRow}>
-                                <td className="px-4 py-3 font-semibold">传统高耗能</td>
-                                <td className="px-4 py-3 text-center">4</td>
-                                <td className="px-4 py-3">南海陶瓷一厂</td>
-                                <td className="px-4 py-3 text-center font-bold">8.0/16.0 MW/MWh</td>
-                                <td className="px-4 py-3 text-sm">24小时连续生产,基荷大</td>
-                                <td className="px-4 py-3 text-center text-green-500 font-bold">100%</td>
-                            </tr>
-                            <tr className={styles.tableRow}>
-                                <td className="px-4 py-3 font-semibold">纺织印染</td>
-                                <td className="px-4 py-3 text-center">3</td>
-                                <td className="px-4 py-3">佛山纺织B区</td>
-                                <td className="px-4 py-3 text-center font-bold">4.5/9.0 MW/MWh</td>
-                                <td className="px-4 py-3 text-sm">峰谷明显,调节潜力大</td>
-                                <td className="px-4 py-3 text-center text-green-400 font-bold">90%</td>
-                            </tr>
-                            <tr className={styles.tableRow}>
-                                <td className="px-4 py-3 font-semibold">冷链/食品</td>
-                                <td className="px-4 py-3 text-center">3</td>
-                                <td className="px-4 py-3">高明食品基地</td>
-                                <td className="px-4 py-3 text-center font-bold">3.0/6.0 MW/MWh</td>
-                                <td className="px-4 py-3 text-sm">热惯性调节能力强</td>
-                                <td className="px-4 py-3 text-center text-yellow-400 font-bold">85%</td>
-                            </tr>
-                            <tr className={`${styles.tableRow} border-t-2 ${styles.border}`}>
-                                <td className="px-4 py-3 font-bold text-lg">合计</td>
-                                <td className="px-4 py-3 text-center font-bold">15</td>
-                                <td className="px-4 py-3">--</td>
-                                <td className="px-4 py-3 text-center font-bold text-xl text-green-400">21.5/43.0 MW/MWh</td>
-                                <td className="px-4 py-3">多样化互补</td>
-                                <td className="px-4 py-3 text-center font-bold">Avg 95%</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div className="overflow-x-auto my-8 -mx-3 sm:mx-0">
+                    <div className="inline-block min-w-full align-middle">
+                        <div className="overflow-hidden shadow ring-1 ring-black ring-opacity-5 rounded-xl">
+                            <table className={`min-w-full divide-y ${styles.card}`}>
+                                <thead className={styles.tableHeader}>
+                                    <tr>
+                                        <th className="px-2 sm:px-4 py-2 sm:py-3 text-left text-xs sm:text-sm">项目分类</th>
+                                        <th className="px-2 sm:px-4 py-2 sm:py-3 text-center text-xs sm:text-sm">数量</th>
+                                        <th className="px-2 sm:px-4 py-2 sm:py-3 text-left text-xs sm:text-sm">典型代表</th>
+                                        <th className="px-2 sm:px-4 py-2 sm:py-3 text-center text-xs sm:text-sm">总容量</th>
+                                        <th className="px-2 sm:px-4 py-2 sm:py-3 text-left text-xs sm:text-sm">行业属性</th>
+                                        <th className="px-2 sm:px-4 py-2 sm:py-3 text-center text-xs sm:text-sm">消纳能力</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr className={styles.tableRow}>
+                                        <td className="px-2 sm:px-4 py-2 sm:py-3 font-semibold text-xs sm:text-base">高端制造</td>
+                                        <td className="px-2 sm:px-4 py-2 sm:py-3 text-center text-xs sm:text-base">5</td>
+                                        <td className="px-2 sm:px-4 py-2 sm:py-3 text-xs sm:text-base">帕尔福电机</td>
+                                        <td className="px-2 sm:px-4 py-2 sm:py-3 text-center font-bold text-xs sm:text-base">6.0/12.0 MW/MWh</td>
+                                        <td className="px-2 sm:px-4 py-2 sm:py-3 text-xs">负荷稳定,电能质量敏感</td>
+                                        <td className="px-2 sm:px-4 py-2 sm:py-3 text-center text-green-500 font-bold text-xs sm:text-base">98%+</td>
+                                    </tr>
+                                    <tr className={styles.tableRow}>
+                                        <td className="px-2 sm:px-4 py-2 sm:py-3 font-semibold text-xs sm:text-base">传统高耗能</td>
+                                        <td className="px-2 sm:px-4 py-2 sm:py-3 text-center text-xs sm:text-base">4</td>
+                                        <td className="px-2 sm:px-4 py-2 sm:py-3 text-xs sm:text-base">南海陶瓷一厂</td>
+                                        <td className="px-2 sm:px-4 py-2 sm:py-3 text-center font-bold text-xs sm:text-base">8.0/16.0 MW/MWh</td>
+                                        <td className="px-2 sm:px-4 py-2 sm:py-3 text-xs">24小时连续生产,基荷大</td>
+                                        <td className="px-2 sm:px-4 py-2 sm:py-3 text-center text-green-500 font-bold text-xs sm:text-base">100%</td>
+                                    </tr>
+                                    <tr className={styles.tableRow}>
+                                        <td className="px-2 sm:px-4 py-2 sm:py-3 font-semibold text-xs sm:text-base">纺织印染</td>
+                                        <td className="px-2 sm:px-4 py-2 sm:py-3 text-center text-xs sm:text-base">3</td>
+                                        <td className="px-2 sm:px-4 py-2 sm:py-3 text-xs sm:text-base">佛山纺织B区</td>
+                                        <td className="px-2 sm:px-4 py-2 sm:py-3 text-center font-bold text-xs sm:text-base">4.5/9.0 MW/MWh</td>
+                                        <td className="px-2 sm:px-4 py-2 sm:py-3 text-xs">峰谷明显,调节潜力大</td>
+                                        <td className="px-2 sm:px-4 py-2 sm:py-3 text-center text-green-400 font-bold text-xs sm:text-base">90%</td>
+                                    </tr>
+                                    <tr className={styles.tableRow}>
+                                        <td className="px-2 sm:px-4 py-2 sm:py-3 font-semibold text-xs sm:text-base">冷链/食品</td>
+                                        <td className="px-2 sm:px-4 py-2 sm:py-3 text-center text-xs sm:text-base">3</td>
+                                        <td className="px-2 sm:px-4 py-2 sm:py-3 text-xs sm:text-base">高明食品基地</td>
+                                        <td className="px-2 sm:px-4 py-2 sm:py-3 text-center font-bold text-xs sm:text-base">3.0/6.0 MW/MWh</td>
+                                        <td className="px-2 sm:px-4 py-2 sm:py-3 text-xs">热惯性调节能力强</td>
+                                        <td className="px-2 sm:px-4 py-2 sm:py-3 text-center text-yellow-400 font-bold text-xs sm:text-base">85%</td>
+                                    </tr>
+                                    <tr className={`${styles.tableRow} border-t-2 ${styles.border}`}>
+                                        <td className="px-2 sm:px-4 py-2 sm:py-3 font-bold text-sm sm:text-lg">合计</td>
+                                        <td className="px-2 sm:px-4 py-2 sm:py-3 text-center font-bold text-xs sm:text-base">15</td>
+                                        <td className="px-2 sm:px-4 py-2 sm:py-3 text-xs sm:text-base">--</td>
+                                        <td className="px-2 sm:px-4 py-2 sm:py-3 text-center font-bold text-sm sm:text-xl text-green-400">21.5/43.0 MW/MWh</td>
+                                        <td className="px-2 sm:px-4 py-2 sm:py-3 text-xs sm:text-base">多样化互补</td>
+                                        <td className="px-2 sm:px-4 py-2 sm:py-3 text-center font-bold text-xs sm:text-base">Avg 95%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
 
                 {/* 资产分布饼图 */}
@@ -264,7 +268,7 @@ export function ContentSection3({ styles }: SectionProps) {
             </div>
 
             <div id="domestic-3-2" className="mb-12">
-                <h3 className="text-3xl font-semibold mb-6">3.2 变现模式:人民币营收的三驾马车</h3>
+                <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold mb-4 md:mb-6">3.2 变现模式:人民币营收的三驾马车</h3>
 
                 {/* 三驾马车收入结构图 */}
                 <div className="my-12">
@@ -323,10 +327,10 @@ export function ContentSection3({ styles }: SectionProps) {
 export function ContentSection4({ styles }: SectionProps) {
     return (
         <section id="overseas" className="mb-16">
-            <h2 className={`text-4xl font-bold mb-8 ${styles.heading}`}>4. 业务线B:海外RWA平台</h2>
+            <h2 className={`text-2xl md:text-3xl lg:text-4xl font-bold mb-6 md:mb-8 ${styles.heading}`}>4. 业务线B:海外RWA平台</h2>
 
             <div id="overseas-4-1" className="mb-12">
-                <h3 className="text-3xl font-semibold mb-6">4.1 独立架构:离岸合规设计的艺术</h3>
+                <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold mb-4 md:mb-6">4.1 独立架构:离岸合规设计的艺术</h3>
                 <p className="leading-relaxed mb-6">
                     为了在合规的前提下连接全球资本,必须在法律架构上进行精巧设计,确保"双轨"在物理和法律上的绝对隔离。
                 </p>
@@ -358,7 +362,7 @@ export function ContentSection4({ styles }: SectionProps) {
             </div>
 
             <div id="overseas-4-2" className="mb-12">
-                <h3 className="text-3xl font-semibold mb-6">4.2 实施路径:能力出海而非简单的资产出海</h3>
+                <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold mb-4 md:mb-6">4.2 实施路径:能力出海而非简单的资产出海</h3>
                 <p className="leading-relaxed mb-6">
                     我们清醒地认识到,直接将中国境内的物理资产所有权转移到海外发行Token面临着外汇管制(SAFE)、外商投资(FDI)及数据出境(PIPL)的多重合规障碍。因此,我们的实施路径是<strong>"能力出海"与"权益出海"</strong>相结合。
                 </p>
@@ -384,7 +388,7 @@ export function ContentSection4({ styles }: SectionProps) {
             </div>
 
             <div id="overseas-4-3" className="mb-12">
-                <h3 className="text-3xl font-semibold mb-6">4.3 发行模式:全球公链上的STO</h3>
+                <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold mb-4 md:mb-6">4.3 发行模式:全球公链上的STO</h3>
 
                 {/* STO发行流程序列图 */}
                 <div className="my-12">
@@ -429,10 +433,10 @@ export function ContentSection4({ styles }: SectionProps) {
 export function ContentSection5({ styles }: SectionProps) {
     return (
         <section id="financial" className="mb-16">
-            <h2 className={`text-4xl font-bold mb-8 ${styles.heading}`}>5. 财务与运营规划</h2>
+            <h2 className={`text-2xl md:text-3xl lg:text-4xl font-bold mb-6 md:mb-8 ${styles.heading}`}>5. 财务与运营规划</h2>
 
             <div id="financial-5-1" className="mb-12">
-                <h3 className="text-3xl font-semibold mb-6">5.1 双重收入流模型</h3>
+                <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold mb-4 md:mb-6">5.1 双重收入流模型</h3>
                 <p className="leading-relaxed mb-6">
                     创电云的独特之处在于构建了互不依赖、互为对冲的双重收入结构。
                 </p>
@@ -571,7 +575,7 @@ export function ContentSection5({ styles }: SectionProps) {
             </div>
 
             <div id="financial-5-2" className="mb-12">
-                <h3 className="text-3xl font-semibold mb-6">5.2 合规防火墙:互不交叉的生命线</h3>
+                <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold mb-4 md:mb-6">5.2 合规防火墙:互不交叉的生命线</h3>
                 <p className="leading-relaxed mb-6">
                     鉴于境内外监管环境的巨大差异,特别是中国大陆对加密货币交易的严格禁止,我们必须建立严密的防火墙。
                 </p>
@@ -616,7 +620,7 @@ export function ContentSection5({ styles }: SectionProps) {
 export function ContentSection6({ styles }: SectionProps) {
     return (
         <section id="conclusion" className="mb-16">
-            <h2 className={`text-4xl font-bold mb-8 ${styles.heading}`}>6. 结论</h2>
+            <h2 className={`text-2xl md:text-3xl lg:text-4xl font-bold mb-6 md:mb-8 ${styles.heading}`}>6. 结论</h2>
 
             <div className="space-y-6 leading-relaxed">
                 <p className="text-lg">

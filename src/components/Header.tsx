@@ -84,7 +84,7 @@ const Header = ({ onNavigate, currentPage = 'home' }: HeaderProps) => {
                 : 'bg-white/95 backdrop-blur-sm shadow-sm'
                 }`}>
                 <nav className="section-container">
-                    <div className="flex items-center justify-between h-16 md:h-20">
+                    <div className="flex items-center justify-between h-14 md:h-20">
                         {/* Logo */}
                         <motion.div
                             className="flex items-center"
@@ -94,9 +94,10 @@ const Header = ({ onNavigate, currentPage = 'home' }: HeaderProps) => {
                             <a
                                 href="#hero"
                                 onClick={(e) => { e.preventDefault(); scrollToSection('#hero') }}
-                                className="text-lg md:text-2xl font-bold gradient-text relative group"
+                                className="text-base sm:text-lg md:text-2xl font-bold gradient-text relative group"
                             >
-                                {t.header.logo.title} | {t.header.logo.subtitle}
+                                <span className="inline sm:hidden">{t.header.logo.title}</span>
+                                <span className="hidden sm:inline">{t.header.logo.title} | {t.header.logo.subtitle}</span>
                                 <motion.div
                                     className="absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-primary to-secondary hidden md:block"
                                     initial={{ width: 0 }}

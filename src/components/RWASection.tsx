@@ -99,21 +99,21 @@ const RWASection = () => {
                     </p>
 
                     {/* 按钮组 */}
-                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 w-full max-w-md sm:max-w-none mx-auto px-4 sm:px-0">
                         {/* 演示平台按钮 */}
                         <motion.a
                             href="https://rwademo.scdc.cloud/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 px-6 py-3 bg-white/20 hover:bg-white/30 backdrop-blur-lg rounded-full border border-white/30 transition-all duration-300 group"
+                            className="flex items-center justify-center gap-2 px-6 py-3 bg-white/20 hover:bg-white/30 backdrop-blur-lg rounded-full border border-white/30 transition-all duration-300 group w-full sm:w-auto"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                             initial={{ opacity: 0, y: 20 }}
                             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                             transition={{ delay: 0.4 }}
                         >
-                            <span className="text-white font-medium">{t.rwa.demoButton}</span>
-                            <ArrowRight className="w-5 h-5 text-white group-hover:translate-x-1 transition-transform" />
+                            <span className="text-white font-medium text-sm sm:text-base">{t.rwa.demoButton}</span>
+                            <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-white group-hover:translate-x-1 transition-transform" />
                         </motion.a>
 
                         {/* 商业计划书按钮 */}
@@ -121,15 +121,15 @@ const RWASection = () => {
                             href="/business-plan.html"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500/30 to-purple-500/30 hover:from-blue-500/40 hover:to-purple-500/40 backdrop-blur-lg rounded-full border border-purple-300/50 transition-all duration-300 group shadow-lg shadow-purple-500/20"
+                            className="flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500/30 to-purple-500/30 hover:from-blue-500/40 hover:to-purple-500/40 backdrop-blur-lg rounded-full border border-purple-300/50 transition-all duration-300 group shadow-lg shadow-purple-500/20 w-full sm:w-auto"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                             initial={{ opacity: 0, y: 20 }}
                             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                             transition={{ delay: 0.5 }}
                         >
-                            <span className="text-white font-medium">商业计划书</span>
-                            <ArrowRight className="w-5 h-5 text-white group-hover:translate-x-1 transition-transform" />
+                            <span className="text-white font-medium text-sm sm:text-base">商业计划书</span>
+                            <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-white group-hover:translate-x-1 transition-transform" />
                         </motion.a>
                     </div>
                 </motion.div>
